@@ -43,3 +43,17 @@ When you're done, deactivate it by running:
 ```bash
 deactivate
 ```
+
+## install pytest
+
+```bash
+pip3 install pytest
+```
+
+## run tests
+
+```bash
+pytest
+or
+pytest -v # verbose mode
+```
