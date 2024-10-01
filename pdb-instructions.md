@@ -99,3 +99,9 @@ The debugger will start, and execution will stop at the first breakpoint.
 - `p variable`: Print the value of a variable.
 - `s`: Step into a function.
 - `c`: Continue until the next breakpoint.
+
+## debug test with pytest:
+
+```
+pytest --pdb
+```

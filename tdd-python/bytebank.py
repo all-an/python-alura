@@ -20,6 +20,15 @@ class Funcionario:
     def salario(self):
         return self._salario
     
+    def _eh_socio(self): # _ significa privado
+        sobrenomes_gerentes = ['Bragança', 'Windsor']
+        return self.salario >= 100000 and (self.sobrenome() in sobrenomes_gerentes)
+
+    def decrescimo_salario(self):
+        if self._eh_socio():
+            decrescimo = self._salario * 0.1
+            self._salario = self._salario - decrescimo
+    
     def idade(self):
         data_nascimento_quebrada = self._data_nascimento.split('/')
         ano_atual = date.today().year
@@ -28,7 +37,7 @@ class Funcionario:
     def calcular_bonus(self):
         valor = self._salario * 0.1
         if valor > 1000:
-            valor = 0
+            raise Exception("Salario muito alto para receber bônus!")
         return valor
     
     def __str__(self):
