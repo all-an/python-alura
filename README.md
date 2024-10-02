@@ -35,6 +35,8 @@ Replace `myenv` with the name of your virtual environment.
 - On **macOS/Linux**:
   ```bash
   source myenv/bin/activate
+  or
+  source /home/all-an/Public/code/python-alura/myenv/bin/activate
   ```
 
 ## 4. Deactivate the virtual environment
@@ -56,4 +58,49 @@ pip3 install pytest
 pytest
 or
 pytest -v # verbose mode
+```
+
+## running one test by word in it's name:
+
+```
+# will run the first test
+pytest -k idade
+or
+pytest -k idade -v
+```
+
+## running two tests by mark decorator:
+
+```
+pytest -v -m calcular_bonus
+```
+
+## see all marks possible to use:
+
+```
+pytest --markers
+
+```
+Example:
+If you use mark @mark.skip and run pytest, you will skip the test with the mark
+
+
+## code coverage requirements:
+
+```
+pip install pytest-cov==3.0.0
+```
+
+## coverage all files:
+
+```
+pytest --cov
+
+```
+
+## specify directory:
+
+```
+pytest --cov=bytebank
+# will run coverage only on bytebank.py file
 ```

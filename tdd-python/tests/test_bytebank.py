@@ -1,5 +1,6 @@
 from bytebank import Funcionario
 import pytest
+from pytest import mark
 
 class TestBytebank:
     def test_quando_idade_recebe_13_03_2000_deve_retornar_24(self):
@@ -15,6 +16,7 @@ class TestBytebank:
         # then
         assert resultado == esperado
 
+    @mark.calcular_bonus
     def test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho(self):
         # given
         entrada = ' Lucas Carvalho '
@@ -28,6 +30,7 @@ class TestBytebank:
         # then
         assert resultado == esperado
 
+    @mark.calcular_bonus
     def test_quando_decrescimo_salario_recebe100000_deve_retornar_90000(self):
         entrada_nome = 'Paulo Bragança'
         entrada_salario = 100000
@@ -39,6 +42,7 @@ class TestBytebank:
 
         assert resultado == esperado
 
+    @mark.skip
     def test_se_salario_maior_ou_igual100000_e_sobrenome_gerentes_retornaTrue(self):
         entrada_nome = 'Sergio Bragança'
         entrada_salario = 101000
