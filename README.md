@@ -111,3 +111,9 @@ pytest --cov=bytebank
 pytest --cov=bytebank --cov-report term-missing
 ```
 The new Missing column on the report is the line of code not covered
+
+## generate html report
+
+```
+pytest --cov=bytebank --cov-report html
+```
