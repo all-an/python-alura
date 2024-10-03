@@ -71,3 +71,13 @@ class TestBytebank:
             resultado = funcionario.calcular_bonus()
 
             assert resultado
+
+    def test_retorno_str(self):
+        entrada_nome = 'Sergio Bragança'
+        entrada_salario = 1000
+        esperado = 'Funcionario(Sergio Bragança, 11/11/2000, 1000)'
+
+        funcionario = Funcionario(entrada_nome, '11/11/2000', entrada_salario)
+        bonus = funcionario.__str__()
+
+        assert bonus == esperado

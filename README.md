@@ -104,3 +104,10 @@ pytest --cov
 pytest --cov=bytebank
 # will run coverage only on bytebank.py file
 ```
+
+## specify part of code where tests are not covering
+
+```
+pytest --cov=bytebank --cov-report term-missing
+```
+The new Missing column on the report is the line of code not covered
