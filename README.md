@@ -117,3 +117,14 @@ The new Missing column on the report is the line of code not covered
 ```
 pytest --cov=bytebank --cov-report html
 ```
+
+### generate junit xml report
+
+```
+pytest --junitxml report.xml
+```
+
+### generate xml with coverage
+```
+pytest --cov-report xml
+```

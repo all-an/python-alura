@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite name="pytest" errors="0" failures="0" skipped="1" tests="7" time="0.141"
+        timestamp="2024-10-03T04:52:47.127170-03:00" hostname="all-an">
+        <testcase classname="tests.test_bytebank.TestBytebank"
+            name="test_quando_idade_recebe_13_03_2000_deve_retornar_24" time="0.003" />
+        <testcase classname="tests.test_bytebank.TestBytebank"
+            name="test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho" time="0.002" />
+        <testcase classname="tests.test_bytebank.TestBytebank"
+            name="test_quando_decrescimo_salario_recebe100000_deve_retornar_90000" time="0.001" />
+        <testcase classname="tests.test_bytebank.TestBytebank"
+            name="test_se_salario_maior_ou_igual100000_e_sobrenome_gerentes_retornaTrue"
+            time="0.001">
+            <skipped type="pytest.skip" message="unconditional skip">/home/all-an/Public/code/python-alura/tdd-python/tests/test_bytebank.py:45:
+                unconditional skip</skipped>
+        </testcase>
+        <testcase classname="tests.test_bytebank.TestBytebank"
+            name="test_quando_calcular_bonus_recebe_salario_1000_deve_retornar_100" time="0.002" />
+        <testcase classname="tests.test_bytebank.TestBytebank"
+            name="test_quando_calcular_bonus_recebe_salario_1000000_deve_retornar_exception"
+            time="0.002" />
+        <testcase classname="tests.test_bytebank.TestBytebank" name="test_retorno_str" time="0.001" />
+    </testsuite>
+</testsuites>
